@@ -41,6 +41,8 @@ header a:hover {
 
 header nav ul {
     list-style-type: none;
+    margin-left: 250px;
+    margin-top: 10px;
 }
 
 header nav ul li {
