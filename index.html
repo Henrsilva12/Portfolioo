@@ -54,27 +54,29 @@
 
         <section class="carrossel">
             <div class="container-carrossel">
-                <div class="carrossel-itens">
-                    <div class="item">
-                        <img src="/images/design.png" alt="">
-                    </div>
+                <div class="carrossel-wrapper">
+                    <div class="carrossel-itens">
+                        <div class="item">
+                            <img src="/images/design.png" alt="">
+                        </div>
 
-                    <div class="item">
-                        <img src="/images/design.png" alt="">
-                    </div>
+                        <div class="item">
+                            <img src="/images/design.png" alt="">
+                        </div>
 
-                    <div class="item">
-                        <img src="/images/design.png" alt="">
-                    </div>
+                        <div class="item">
+                            <img src="/images/design.png" alt="">
+                        </div>
 
-                    <div class="item">
-                        <img src="/images/design.png" alt="">
-                    </div>
+                        <div class="item">
+                            <img src="/images/design.png" alt="">
+                        </div>
 
-                    <div class="item">
-                        <img src="/images/design.png" alt="">
-                    </div>
-                </div> <!--carrossel-itens-->
+                        <div class="item">
+                            <img src="/images/design.png" alt="">
+                        </div>
+                    </div> <!--carrossel-itens-->
+                </div> <!--carrossel-wrapper-->
             </div>
         </section> <!--carrossel-->
 
@@ -112,5 +114,53 @@
             <p>Criado por Henrique Santos</p>
         </div> <!--container-footer-->
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carrosselItens = document.querySelector('.carrossel-itens');
+            const items = document.querySelectorAll('.carrossel-itens .item');
+            
+            if (items.length === 0) return;
+            
+            const itemWidth = items[0].offsetWidth;
+            const gap = 30;
+            const totalWidth = itemWidth + gap;
+            let currentPosition = 0;
+            let isPaused = false;
+            
+            const cloneItems = () => {
+                items.forEach(item => {
+                    const clone = item.cloneNode(true);
+                    carrosselItens.appendChild(clone);
+                });
+            };
+            
+            cloneItems();
+            
+            function moveCarrossel() {
+                if (isPaused) return;
+                
+                currentPosition -= 1.3;
+                
+                if (Math.abs(currentPosition) >= (items.length * totalWidth)) {
+                    currentPosition = 0;
+                }
+                
+                carrosselItens.style.transform = `translateX(${currentPosition}px)`;
+                requestAnimationFrame(moveCarrossel);
+            }
+            
+            carrosselItens.style.transition = 'none';
+            moveCarrossel();
+            
+            carrosselItens.addEventListener('mouseleave', () => {
+                isPaused = false;
+            });
+            
+            window.addEventListener('resize', () => {
+                
+            });
+        });
+</script>
 </body>
 </html>
