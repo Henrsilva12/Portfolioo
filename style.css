@@ -1,4 +1,3 @@
-/* Estilos Gerais */
 *{
     margin: 0;
     padding: 0;
@@ -30,6 +29,17 @@ body {
     border-radius: 30px;
     cursor: pointer;
     transform: .2s;
+}
+
+h2.titulo {
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2.titulo span {
+    color: rgb(255, 0, 255);
 }
 
 /* Estilos do Header */
@@ -89,6 +99,7 @@ section.topo .flex {
     color: white;
     font-size: 80px;
     line-height: 1.1;
+    padding-top: 100px;
 }
 
 .topo .txt-topo-site p {
@@ -117,7 +128,7 @@ section.topo .flex {
 /* Estilos do Carrossel */
 section.carrossel {
     padding: 40px 4%;
-    margin-top: 60px;
+    margin-top: 90px;
     overflow: hidden;
 }
 
@@ -156,33 +167,118 @@ section.carrossel {
 /* Estilo Des. Gráfico */
 section.design-grafico {
     padding: 40px 4%;
-    margin-top: 60px;
-    text-align: center;
 }
 
-.design-grafico h1 {
-    color: white;
-    font-size: 50px;
-    margin-bottom: 20px;
+section.design-grafico h2{
+    padding-top: 30px;
 }
 
 .design-grafico p {
     color: rgb(202, 201, 201);
     font-size: 22px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section.design-grafico .swiper-container {
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+}
+
+.mySwiper{
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.slide-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-header {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 2;
+}
+
+.slide-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: none;
+}
+
+.swiper-button-prev i,
+.swiper-button-next i {
+    font-size: 24px;
+    color: rgb(3, 9, 128);
+}
+
+.swiper-button-prev {
+    left: 10%;
+}
+
+.swiper-button-next {
+    right: 10%;
+}
+
+.swiper-slide-active {
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .swiper-button-prev {
+        left: 5%;
+    }
+
+    .swiper-button-next {
+        right: 5%;
+    }
+
+    .swiper-slide {
+        width: 250px;
+        height: 400px;
+    }
 }
 
 /* Estilo UI/UX*/
 section.ui-ux {
     padding: 40px 4%;
-    margin-top: 60px;
+    margin-top: 10px;
     text-align: center;
-}
-
-.ui-ux h1 {
-    color: white;
-    font-size: 50px;
-    margin-bottom: 20px;
 }
 
 .ui-ux p {
@@ -198,12 +294,6 @@ section.front-end {
     text-align: center;
 }
 
-.front-end h1 {
-    color: white;
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-
 .front-end p {
     color: rgb(202, 201, 201);
     font-size: 22px;
@@ -216,11 +306,7 @@ section.contato {
     margin-top: 60px;
     text-align: center;
 }
-.contato h1 {
-    color: white;
-    font-size: 50px;
-    margin-bottom: 20px;
-}
+
 .contato p {
     color: rgb(202, 201, 201);
     font-size: 22px;
