@@ -48,6 +48,8 @@ header a {
     text-decoration: none; 
     display: inline-block;
     transition: .2s;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 header a:hover {
@@ -86,11 +88,11 @@ section.topo .flex {
 .topo h1 {
     color: white;
     font-size: 80px;
-    line-height: 85px;
+    line-height: 1.1;
 }
 
 .topo .txt-topo-site p {
-    color: rgb(200, 200, 200);
+    color: rgb(202, 201, 201);
     font-size: 25px;
     margin: 30px 0;
 }
@@ -110,4 +112,110 @@ section.topo .flex {
     100% {
         top: 30px;
     }
+}
+
+/* Estilos do Carrossel */
+section.carrossel {
+    padding: 40px 4%;
+    margin-top: 60px;
+}
+
+.carrossel-itens {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+}
+
+.carrossel-itens .item img {
+    width: 400px;
+    height: 400px;
+}
+
+/* Estilo Des. Gráfico */
+section.design-grafico {
+    padding: 40px 4%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.design-grafico h1 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.design-grafico p {
+    color: rgb(202, 201, 201);
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+/* Estilo UI/UX*/
+section.ui-ux {
+    padding: 40px 4%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.ui-ux h1 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.ui-ux p {
+    color: rgb(202, 201, 201);
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+/* Estilo Front-end */
+section.front-end {
+    padding: 40px 4%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.front-end h1 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.front-end p {
+    color: rgb(202, 201, 201);
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+/* Estilo Contato */
+section.contato {
+    padding: 40px 4%;
+    margin-top: 60px;
+    text-align: center;
+}
+.contato h1 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.contato p {
+    color: rgb(202, 201, 201);
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+/*Estilo Footer */
+footer {
+    background-color: rgb(2, 2, 61);
+    padding: 20px 4%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    color: white;
+    font-size: 18px;
 }
