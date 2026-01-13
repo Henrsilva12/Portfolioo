@@ -277,14 +277,69 @@ section.design-grafico .swiper-container {
 /* Estilo UI/UX*/
 section.ui-ux {
     padding: 40px 4%;
-    margin-top: 10px;
     text-align: center;
+}
+
+.ui-ux h2 {
+    margin-top: 10px;
 }
 
 .ui-ux p {
     color: rgb(202, 201, 201);
     font-size: 22px;
     margin-bottom: 40px;
+}
+
+.cards-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: -15px;
+}
+
+.projetos-cards {
+    margin: 10px;
+    color: aqua;
+    background-color: #ac02ac;
+    height: 650px;
+    width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;;
+}
+
+.projetos-cards img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.projetos-cards h3 {
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.projetos-cards p {
+    font-size: 20px;
+    padding: 20px 30px;
+    margin-bottom: 10px;
+}
+
+.projetos-cards .btn {
+    font-size: 17px;
+    padding: 10px 50px;
+    border: none;
+    background-color: #ff00ff;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.5s background; 
+    cursor: pointer;
+}
+
+.projetos-cards .btn:hover {
+    transition: 0.5s background;
+    background-color: #470147;
 }
 
 /* Estilo Front-end */
