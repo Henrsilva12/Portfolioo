@@ -5,14 +5,86 @@
     font-family: "Lora", serif;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(3, 9, 128, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
 body {
-    background-color: rgb(3, 9, 128);
+    padding-top: 80px;
+    background-color: rgba(3, 9, 128);
     height: 100vh;
+}
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.scrolled {
+    padding: 10px 0;
+    background-color: rgba(3, 9, 128, 0.98);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+
+    header nav ul {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header nav ul li {
+        padding: 0 15px;
+    }
+
+    header a {
+        font-size: 16px;
+    }
+
+    .btn-contato button {
+        padding: 8px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header > .container {
+        flex-direction: column;
+        gap: 10px
+    }
+
+    header nav ul li {
+        padding: 0 10px;
+    }
+
+    body {
+        padding-top: 120px;
+    }
 }
 
 .container {
     max-width: 1280px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .flex {
@@ -66,23 +138,14 @@ h2.titulo span {
 }
 
 /* Estilos do Header */
-.header {
-    padding: 40px 4%;
-}
-
-header > .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 header a {
     color: rgb(164, 164, 164);
     text-decoration: none; 
     display: inline-block;
     transition: .2s;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 header a:hover {
@@ -92,7 +155,7 @@ header a:hover {
 
 header nav ul {
     list-style-type: none;
-    margin-left: 250px;
+    margin-left: 200px;
     margin-top: 10px;
 }
 
@@ -117,7 +180,7 @@ section.topo .flex {
     color: white;
     font-size: 80px;
     line-height: 1.1;
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 .topo .txt-topo-site p {
@@ -410,30 +473,140 @@ section.ui-ux {
         max-height: calc(1.5em * 4);
     }
 }
-/* Estilo Front-end */
-section.front-end {
-    padding: 40px 4%;
-    margin-top: 60px;
-    text-align: center;
-}
-
-.front-end p {
-    color: rgb(202, 201, 201);
-    font-size: 22px;
-    margin-bottom: 40px;
-}
 
 /* Estilo Contato */
 section.contato {
-    padding: 40px 4%;
+    padding: 60px 4%;
     margin-top: 60px;
     text-align: center;
+}
+
+.container-contato {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-contato {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px 30px;
+    text-decoration: none;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.item-contato:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: violet;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
+}
+
+.contato-icone {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.contato-icone i {
+    font-size: 28px;
+}
+
+.email .contato-icone {
+    background-color: rgba(255, 68, 68, 0.1);
+    color: #ff4444;
+}
+
+.linkedin .contato-icone {
+    background-color: rgba(10, 102, 194, 0.1);
+    color: #0a66c2;
+}
+
+.whatsapp .contato-icone {
+    background-color: rgba(37, 211, 102, 0.1);
+    color: #25d366
+}
+
+.contato-info {
+    text-align: left;
+}
+
+.contato-info h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contato-info p {
+    color: rgba(202, 201, 201);
+    font-size: 18px;
+    margin: 0;
 }
 
 .contato p {
     color: rgb(202, 201, 201);
     font-size: 22px;
     margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+    .item-contato {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contato-icone {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .contato-info {
+        text-align: center;
+    }
+    
+    .contato-info h3 {
+        font-size: 22px;
+    }
+    
+    .contato-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {   
+    .item-contato {
+        padding: 15px;
+    }
+    
+    .contato-icone {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .contato-icone i {
+        font-size: 24px;
+    }
+    
+    .contato-info h3 {
+        font-size: 20px;
+    }
+    
+    .contato-info p {
+        font-size: 15px;
+    }
 }
 
 /*Estilo Footer */
