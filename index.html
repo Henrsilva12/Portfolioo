@@ -84,7 +84,7 @@
         <section class="design-grafico" id="grafico">
             <div class="container">
                 <h2 class="titulo">Design <span> Gráfico </span></h2>
-                <p>Criação de identidades visuais, logotipos, materiais promocionais e muito mais para fortalecer a presença da sua marca.</p>
+                <p>Criação de poster para redes sociais, banners e muito mais para fortalecer a presença da sua marca.</p>
 
                 <div class="swiper-container">
                     <div class="swiper mySwiper">
@@ -325,6 +325,44 @@
                     },
                 },
             });
+        });
+    </script>
+
+    <script>
+        let ticking = false;
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const header = document.querySelector('header');
+                    const scrollPosition = window.scrollY;
+                    
+                    if (scrollPosition > 20) {
+                        header.classList.add('scrolled');
+                        
+                        const opacity = Math.min(0.98, 0.8 + (scrollPosition * 0.001));
+                        header.style.background = `linear-gradient(to bottom, 
+                            rgba(3, 9, 128, ${opacity}) 0%,
+                            rgba(0, 2, 33, ${opacity}) 0%)`;
+                    } else {
+                        header.classList.remove('scrolled');
+                        header.style.background = '';
+                    }
+                    
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            }
+            
+            header.style.backfaceVisibility = 'hidden';
+            header.style.transform = 'translateZ(0)';
         });
     </script>
 
