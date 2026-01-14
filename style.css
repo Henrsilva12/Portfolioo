@@ -174,7 +174,7 @@ header a {
     text-decoration: none; 
     display: inline-block;
     transition: .2s;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -185,7 +185,7 @@ header a:hover {
 
 header nav ul {
     list-style-type: none;
-    margin-left: 200px;
+    margin-left: 250px;
     margin-top: 10px;
 }
 
