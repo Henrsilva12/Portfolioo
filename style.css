@@ -11,29 +11,59 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(3, 9, 128, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to bottom, 
+                rgba(1, 3, 58, 0.98) 0%,
+                rgba(0, 2, 33, 0.98) 50%,
+                rgba(0, 2, 33, 0.95) 100%);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
     padding: 15px 0;
     transition: all 0.3s ease;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.01);
 }
 
 body {
     padding-top: 80px;
     background-color: rgba(3, 9, 128);
+    background: radial-gradient(at 51.36411372036708% 85.47643828580964%, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%), radial-gradient(at 88.295178699992% 86.98448945051169%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 1) 0%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 0) 100%), radial-gradient(at 10.103948136588992% 78.0395293809522%, hsla(240, 88.88888888888889%, 14.117647058823529%, 1) 0%, hsla(240, 88.88888888888889%, 14.117647058823529%, 0) 100%), radial-gradient(at 20.06565278867596% 13.04333840063492%, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%), radial-gradient(at 5.927917594856968% 74.60244668717951%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 1) 0%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 0) 100%), radial-gradient(at 59.24099214401319% 18.253221531085806%, hsla(240, 88.88888888888889%, 14.117647058823529%, 1) 0%, hsla(240, 88.88888888888889%, 14.117647058823529%, 0) 100%), radial-gradient(at 9.932714554281151% 41.84151470426984%, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%), radial-gradient(at 18.61116962907853% 70.14732404608642%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 1) 0%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 0) 100%), radial-gradient(at 21.86694218061541% 58.76787016268905%, hsla(240, 88.88888888888889%, 14.117647058823529%, 1) 0%, hsla(240, 88.88888888888889%, 14.117647058823529%, 0) 100%);
     height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(at 51.36411372036708% 85.47643828580964%, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%), radial-gradient(at 88.295178699992% 86.98448945051169%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 1) 0%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 0) 100%), radial-gradient(at 10.103948136588992% 78.0395293809522%, hsla(240, 88.88888888888889%, 14.117647058823529%, 1) 0%, hsla(240, 88.88888888888889%, 14.117647058823529%, 0) 100%), radial-gradient(at 20.06565278867596% 13.04333840063492%, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%), radial-gradient(at 5.927917594856968% 74.60244668717951%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 1) 0%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 0) 100%), radial-gradient(at 59.24099214401319% 18.253221531085806%, hsla(240, 88.88888888888889%, 14.117647058823529%, 1) 0%, hsla(240, 88.88888888888889%, 14.117647058823529%, 0) 100%), radial-gradient(at 9.932714554281151% 41.84151470426984%, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%), radial-gradient(at 18.61116962907853% 70.14732404608642%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 1) 0%, hsla(244.99999999999997, 92.3076923076923%, 20.392156862745097%, 0) 100%), radial-gradient(at 21.86694218061541% 58.76787016268905%, hsla(240, 88.88888888888889%, 14.117647058823529%, 1) 0%, hsla(240, 88.88888888888889%, 14.117647058823529%, 0) 100%);
+    z-index: -2;
+    opacity: 1;
+    pointer-events: none;
 }
 
 header > .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 header.scrolled {
     padding: 10px 0;
-    background-color: rgba(3, 9, 128, 0.98);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, 
+                rgba(3, 9, 128, 0.98) 0%,
+                rgba(0, 2, 33, 0.98) 100%);
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+main {
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -140,7 +170,7 @@ h2.titulo span {
 /* Estilos do Header */
 
 header a {
-    color: rgb(164, 164, 164);
+    color: rgb(253, 248, 248);
     text-decoration: none; 
     display: inline-block;
     transition: .2s;
@@ -149,7 +179,7 @@ header a {
 }
 
 header a:hover {
-    color: white;
+    color: rgb(255, 87, 255);
     transform: scale(1.05);
 }
 
@@ -541,6 +571,7 @@ section.contato {
 
 .contato-info {
     text-align: left;
+    padding-top: 0px;
 }
 
 .contato-info h3 {
@@ -612,10 +643,12 @@ section.contato {
 
 /*Estilo Footer */
 footer {
-    background-color: rgb(2, 2, 61);
+    background: linear-gradient(to bottom, 
+        rgba(0, 2, 24, 0.98) 0%,
+        rgba(0, 2, 33, 0.98) 50%);    
     padding: 20px 4%;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 footer p {
