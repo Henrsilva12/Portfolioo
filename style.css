@@ -521,8 +521,8 @@ section.contato {
 .item-contato {
     display: flex;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgb(4, 9, 80);
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 20px 30px;
     text-decoration: none;
@@ -531,8 +531,8 @@ section.contato {
 }
 
 .item-contato:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: violet;
+    background-color: rgb(6, 14, 103);
+    border-color: rgb(4, 34, 133);
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
 }
@@ -553,23 +553,23 @@ section.contato {
 }
 
 .email .contato-icone {
-    background-color: rgba(255, 68, 68, 0.1);
-    color: #ff4444;
+    background-color: rgba(255, 5, 5, 0.93);
+    color: #f4eeee;
 }
 
 .linkedin .contato-icone {
-    background-color: rgba(10, 102, 194, 0.1);
-    color: #0a66c2;
+    background-color: rgba(61, 153, 246, 0.855);
+    color: #001529;
 }
 
 .whatsapp .contato-icone {
-    background-color: rgba(37, 211, 102, 0.1);
-    color: #25d366
+    background-color: rgba(28, 205, 93, 0.821);
+    color: #001b0a
 }
 
 .contato-info {
     text-align: left;
-    padding-top: 0px;
+    padding-top: 20px;
 }
 
 .contato-info h3 {
