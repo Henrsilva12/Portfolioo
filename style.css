@@ -185,13 +185,13 @@ header a:hover {
 
 header nav ul {
     list-style-type: none;
-    margin-left: 250px;
+    margin-left: 300px;
     margin-top: 10px;
 }
 
 header nav ul li {
     display: inline-block;
-    padding: 0 40px;
+    padding: 0 35px;
 }
 
 /* Estilos Topo */
@@ -409,10 +409,8 @@ section.ui-ux {
 
 .projetos-cards {
     margin: 10px;
-    background-color: #ac02ac;
-    height: 630px;
-    width: 400px;
-    border-radius: 15px;
+    background: radial-gradient(at 65.92735945809036% 73.99957392732941%, hsla(229.72972972972974, 94.87179487179486%, 22.941176470588236%, 1) 0%, hsla(229.72972972972974, 94.87179487179486%, 22.941176470588236%, 0) 100%), radial-gradient(at 87.86523179353583% 91.61160449247639%, hsla(246.89655172413794, 100%, 17.058823529411764%, 1) 0%, hsla(246.89655172413794, 100%, 17.058823529411764%, 0) 100%), radial-gradient(at 63.55460025473965% 14.82174426640781%, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%), radial-gradient(at 32.93599428478069% 62.96414562818819%, hsla(229.72972972972974, 94.87179487179486%, 22.941176470588236%, 1) 0%, hsla(229.72972972972974, 94.87179487179486%, 22.941176470588236%, 0) 100%);                width: 400px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     display: flex;
     flex-direction: column;
@@ -420,7 +418,7 @@ section.ui-ux {
 }
 
 .projetos-cards:hover {
-    box-shadow: 0 0 8px #ac02ac;
+    box-shadow: 0 0 8px #4c014c;
     transform: scale(1.05);
 }
 
@@ -451,7 +449,7 @@ section.ui-ux {
 .projetos-cards p {
     font-size: 18px;
     line-height: 1.5;
-    color: rgb(230, 230, 230);;
+    color: rgb(224, 222, 222);;
     margin-bottom: 10px;
     text-align: center;
     padding: 5px;
