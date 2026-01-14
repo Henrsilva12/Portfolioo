@@ -482,11 +482,12 @@ section.contato {
 }
 
 .container-contato {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-top: 20px;
 }
 
 .item-contato {
@@ -495,7 +496,7 @@ section.contato {
     background-color: rgba(255, 255, 255, 0.05);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 25px 30px;
+    padding: 20px 30px;
     text-decoration: none;
     transition: all 0.3 ease;
     cursor: pointer;
