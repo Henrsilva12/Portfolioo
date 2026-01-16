@@ -148,12 +148,14 @@ main {
     font-weight: 600;
     transform: .2s;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
 .projetos-cards .btn:hover {
     box-shadow: 0 0 8px #ac02ac;
     transform: scale(1.05);
-    /*background-color: #ff00ff;*/
 }
 
 h2.titulo {
