@@ -141,45 +141,41 @@
             <h2 class="titulo" >UI/UX <span>Design</span></h2>
             <p>Design de interfaces intuitivas e experiências de usuário otimizadas para aplicativos e websites</p>
 
-            <div class="cards-box">
-                <div class="projetos-cards">
-                    <img src="/images/capaReciclaITA.png" alt="ReciclaITA">
+            <div class="grid-projetos">
+                <div class="linha-superior">
+                    <a href="projetos/labsif/index.html" class="card-projeto card-pequeno">
+                        <div class="imagem-container">
+                            <img src="/images/capaLanding.png" alt="Landing Page Labsif" class="imagem-projeto">
+                            <div class="overlay">
+                                <div class="conteudo-overlay">
+                                    <h3 class="titulo-projeto">Landing Page LabsIF:</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
 
-                    <div class="card-content">
-                        <h3>ReciclaITA</h3>
-                        <p>Conectando cidadãos e catadores para otimizar a logística de resíduos recicláveis. Como UI/UX Designer e Front-end Developer, projetei interfaces intuitivas focadas em acessibilidade para os catadores e um dashboard administrativo completo para a Defensoria Pública gerenciar a comunicação e o impacto ambiental da cidade.</p>
-                    </div>
-
-                    <div class="card-footer">
-                        <a href="projetos/recicla-ita/index.html" class="btn">Saiba mais</a>
-                    </div>
+                    <a href="projetos/eat-eating/index.html" class="card-projeto card-pequeno">
+                        <div class="imagem-container">
+                            <img src="/images/capaEat.png" alt="EatEating" class="imagem-projeto">
+                            <div class="overlay">
+                                <div class="conteudo-overlay">
+                                    <h3 class="titulo-projeto">Eating: Sistema para restaurtantes universitarios</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
 
-                <div class="projetos-cards">
-                    <img src="/images/capaLanding.png" alt="Landing Page da LabsIF">
-
-                    <div class="card-content">
-                        <h3>LabsIF</h3>
-                        <p>Atuação completa em UI/UX e desenvolvimento front-end (low-code). O desafio foi traduzir a identidade tecnológica da LabsIF em um site intuitivo, focado em apresentar os serviços de criação de apps e sistemas da software house para novos clientes.</p>
+                <a href="projetos/recicla-ita/index.html" class="card-projeto card-grande">
+                    <div class="imagem-container">
+                        <img src="/images/capaReciclaITA.png" alt="ReciclaITA" class="imagem-projeto">
+                        <div class="overlay">
+                            <div class="conteudo-overlay">
+                                <h3 class="titulo-projeto">ReciclaITA: Sistema de gerenciamento de resíduos</h3>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="card-footer">
-                        <a href="projetos/labsif/index.html" class="btn">Saiba mais</a>
-                    </div>
-                </div>
-
-                <div class="projetos-cards">
-                    <img src="/images/capaEat.png" alt="EatEating">
-
-                    <div class="card-content">
-                        <h3>EatEating</h3>
-                        <p>Sistema para controle de acesso e logística alimentar no IF Baiano Campus Itapetinga. A plataforma integra múltiplos métodos de login (Biometria, RFID e Credenciais) a uma catraca física, permitindo a compra antecipada de tickets e consulta de cardápios. Como designer e desenvolvedor, projetei três portais distintos para garantir que alunos e administradores gerenciem o fluxo de refeições com precisão e desperdício zero.</p>
-                    </div>
-
-                    <div class="card-footer">
-                        <a href="projetos/eat-eating/index.html" class="btn">Saiba mais</a>
-                    </div>
-                </div>
+                </a>
             </div>
         </section> <!--ui-ux-->
 
@@ -366,5 +362,43 @@
         });
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-projeto');
+            
+            cards.forEach(card => {
+                const img = card.querySelector('.imagem-projeto');
+                
+                card.addEventListener('mousemove', function(e) {
+                    const x = e.clientX - card.getBoundingClientRect().left;
+                    const y = e.clientY - card.getBoundingClientRect().top;
+                    
+                    const centerX = card.offsetWidth / 2;
+                    const centerY = card.offsetHeight / 2;
+                    
+                    const moveX = (x - centerX) * 0.01;
+                    const moveY = (y - centerY) * 0.01;
+                    
+                    img.style.transform = `scale(1.05) translate(${moveX}px, ${moveY}px)`;
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    img.style.transform = 'scale(1)';
+                });
+            });
+            
+            const images = document.querySelectorAll('.imagem-projeto');
+            images.forEach(img => {
+                if (img.complete) {
+                    img.style.opacity = '1';
+                } else {
+                    img.style.opacity = '0';
+                    img.addEventListener('load', function() {
+                        this.style.opacity = '1';
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
