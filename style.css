@@ -166,26 +166,6 @@ main {
     transform: scale(1.05);
 }
 
-.projetos-cards .btn {
-    font-size: 17px;
-    padding: 12px 40px;
-    border: none;
-    background-color: violet;
-    color: rgb(11, 11, 11);
-    border-radius: 10px;
-    font-weight: 600;
-    transform: .2s;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-}
-
-.projetos-cards .btn:hover {
-    box-shadow: 0 0 8px #ac02ac;
-    transform: scale(1.05);
-}
-
 h2.titulo {
     color: white;
     font-size: 38px;
@@ -634,25 +614,6 @@ section.ui-ux {
         font-size: 18px;
         margin-bottom: 40px;
     }
-}
-
-.card-projeto::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(
-        circle at center,
-        rgba(253, 239, 253, 0.1) 0%,
-        rgba(172, 2, 172, 0) 70%
-    );
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    border-radius: 20px;
-    pointer-events: none;
-    z-index: 0;
 }
 
 .card-projeto:hover::after {
