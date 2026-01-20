@@ -45,6 +45,8 @@ body {
     color: #12d426;
     text-align: left;
     position: relative;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .about-content {
@@ -53,10 +55,13 @@ body {
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px
 }
 
 .about-text {
     flex: 1;
+    padding-left: 0;
+    margin-left: -40px;
 }
 
 .about-image {
@@ -71,23 +76,30 @@ body {
 }
 
 .about-text span {
-    color: violet;
+    color: #16fa2d;
     font-weight: 600;
 }
 
 .about-text p {
     font-size: 18px;
-    line-height: 1.5;
-    max-width: 800px;
+    line-height: 1.6;
+    max-width: 100%;
     margin-bottom: 20px;
     text-align: justify;
     color: #ebe8e8;
-    margin-left: -20px;
+    text-indent: 0;
+}
+
+.about h2,
+.about-text,
+.about-text p {
+    box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
     .about-content {
         gap: 40px;
+        padding: 0 15px;
     }
     
     .about-image {
@@ -99,10 +111,12 @@ body {
     .about-content {
         flex-direction: column-reverse;
         gap: 40px;
+        -webkit-padding-start: 0 20px;
     }
     
     .about-text {
         padding-right: 0;
+        width: 100%;
     }
     
     .about-image {
@@ -116,11 +130,13 @@ body {
     
     .about h2 {
         font-size: 32px;
+        padding-left: 0;
     }
     
     .about-text p {
         font-size: 17px;
         line-height: 1.6;
+        text-align: left;
     }
 }
 
@@ -133,12 +149,18 @@ body {
     .about h2 {
         font-size: 28px;
         margin-bottom: 30px;
+        padding-left: 0;
+    }
+
+    .about-content {
+        padding: 0 15px;
     }
     
     .about-text p {
         font-size: 16px;
         line-height: 1.5;
         margin-bottom: 20px;
+        text-align: left;
     }
     
     .about-image {
@@ -149,10 +171,12 @@ body {
 @media (max-width: 480px) {
     .about h2 {
         font-size: 24px;
+        padding-left: 0;
     }
     
     .about-text p {
         font-size: 15px;
+        line-height: 1.5;
         text-align: left;
     }
     
@@ -161,6 +185,7 @@ body {
     }
     
     .about-content {
+        padding: 0 10px;
         gap: 30px;
     }
 }
