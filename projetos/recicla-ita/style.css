@@ -262,7 +262,7 @@ h2 {
 }
 
 .coluna li {
-    padding: 5px 0;
+    padding: 10px 0;
     position: relative;
     padding-left: 20px;
     color: #f2f0f0;
@@ -350,7 +350,7 @@ h2 {
 .image-processos h4 {
     margin-bottom: 15px;
     color: #12d426;
-    font-size: 20px;
+    font-size: 25px;
     padding-top: 40px;
     text-align: center;
 }
@@ -359,7 +359,7 @@ h2 {
     margin-bottom: 15px;
     color: #eef2ee;
     font-size: 20px;
-    padding-top: 10px;
+    padding-top: 50px;
     text-align: left;
 }
 
@@ -368,12 +368,218 @@ h2 {
     margin-bottom: 20px;
 }
 
+.explore-more {
+    padding: 40px 0 60px;
+    margin: 40px 0;
+}
+
+.explore-title {
+    font-size: 36px;
+    text-align: center;
+    color: violet;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.explore-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    height: 100%;
+}
+
+.explore-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.explore-card-image {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.explore-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.explore-card:hover .explore-card-image img {
+    transform: scale(1.05);
+}
+
+.explore-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.explore-card:hover .explore-card-overlay {
+    opacity: 1;
+}
+
+.explore-card-overlay i {
+    font-size: 40px;
+    color: rgb(255, 0, 255);
+    background: rgb(245, 199, 245);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore-card-content {
+    padding: 25px;
+}
+
+.explore-card-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: violet;
+    transition: color 0.3s ease;
+}
+
+.explore-card:hover .explore-card-content h3 {
+    color: rgb(239, 20, 239);
+}
+
+.explore-card-content p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .explore-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-more {
+        padding: 60px 0 40px;
+        margin: 40px 0;
+    }
+    
+    .explore-title {
+        font-size: 28px;
+    }
+    
+    .explore-subtitle {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    
+    .explore-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .explore-card-image {
+        height: 180px;
+    }
+    
+    .explore-card-content {
+        padding: 20px;
+    }
+    
+    .explore-card-content h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-title {
+        font-size: 24px;
+    }
+    
+    .explore-card-image {
+        height: 160px;
+    }
+    
+    .explore-card-content h3 {
+        font-size: 18px;
+    }
+    
+    .explore-card-content p {
+        font-size: 14px;
+    }
+    
+    .explore-all-content h3 {
+        font-size: 18px;
+    }
+    
+    .explore-all-content i {
+        font-size: 40px;
+    }
+}
+
+.explore-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.explore-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.explore-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .cta-projeto {
     text-align: center;
     background: rgba(255, 255, 255, 0.05);
-    padding: 50px;
+    padding: 40px;;
     border-radius: 20px;
-    margin: 60px 0;
+    margin-top: 40px;
+}
+
+.cta-projeto h2 {
+    margin-bottom: 15px;
+    color: violet;
 }
 
 .cta-projeto .btn {
