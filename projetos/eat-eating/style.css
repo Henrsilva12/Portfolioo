@@ -80,6 +80,7 @@ h2 {
     width: 100%;
 }
 
+
 .about-text p {
     font-size: 18px;
     line-height: 1.6;
@@ -300,6 +301,23 @@ h2 {
     transform: scale(1.02);
 }
 
+.galeria-grid-alta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.galeria-grid-alta img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.galeria-grid-alta img:hover {
+    transform: scale(1.02);
+}
+
 .galeria-grid-dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -316,7 +334,6 @@ h2 {
 .galeria-grid-dashboard img:hover {
     transform: scale(1.02);
 }
-
 
 .processo-projeto {
     margin: 60px 0;
