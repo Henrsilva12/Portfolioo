@@ -628,8 +628,8 @@ section.ui-ux {
 
 /* Estilo Contato */
 section.contato {
-    padding: 60px 4%;
-    margin-top: 60px;
+    padding: 30px 4%;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -642,71 +642,8 @@ section.contato {
     padding-top: 20px;
 }
 
-.item-contato {
-    display: flex;
-    align-items: center;
-    background-color: rgb(4, 9, 80);
-    border: 1.5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px 30px;
-    text-decoration: none;
-    transition: all 0.3 ease;
-    cursor: pointer;
-}
-
-.item-contato:hover {
-    background-color: rgb(6, 14, 103);
-    border-color: rgb(4, 34, 133);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.2);
-}
-
-.contato-icone {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 25px;
-    flex-shrink: 0;
-}
-
-.contato-icone i {
-    font-size: 28px;
-}
-
-.email .contato-icone {
-    background-color: rgba(255, 5, 5, 0.93);
-    color: #f4eeee;
-}
-
-.linkedin .contato-icone {
-    background-color: rgba(61, 153, 246, 0.855);
-    color: #001529;
-}
-
-.whatsapp .contato-icone {
-    background-color: rgba(28, 205, 93, 0.821);
-    color: #001b0a
-}
-
-.contato-info {
-    text-align: left;
-    padding-top: 20px;
-}
-
-.contato-info h3 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.contato-info p {
-    color: rgba(202, 201, 201);
-    font-size: 18px;
-    margin: 0;
+.contato h2 {
+    font-size: 70px;
 }
 
 .contato p {
@@ -716,48 +653,12 @@ section.contato {
 }
 
 @media (max-width: 768px) {
-    .item-contato {
-        padding: 20px;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .contato-icone {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-    
-    .contato-info {
-        text-align: center;
-    }
-    
-    .contato-info h3 {
-        font-size: 22px;
-    }
-    
     .contato-info p {
         font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {   
-    .item-contato {
-        padding: 15px;
-    }
-    
-    .contato-icone {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .contato-icone i {
-        font-size: 24px;
-    }
-    
-    .contato-info h3 {
-        font-size: 20px;
-    }
-    
     .contato-info p {
         font-size: 15px;
     }
