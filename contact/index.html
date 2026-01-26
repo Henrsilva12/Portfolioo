@@ -5,64 +5,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Belanosima:wght@400;600;700&family=Boogaloo&family=Bungee&family=Cabin+Sketch:wght@400;700&family=Caveat:wght@400..700&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Heebo:wght@100..900&family=Kalam:wght@300;400;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nova+Mono&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rampart+One&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Dirt&family=Story+Script&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css" class="css">
-    <title>Contato</title>
+    <title>Contato | Henrique Santos</title>
+    <style>
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            z-index: 1000;
+            opacity: 0;
+            transform: translateX(100px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        
+        .notification.success {
+            background-color: #28a745;
+        }
+        
+        .notification.error {
+            background-color: #dc3545;
+        }
+        
+        .notification.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#grafico">Design Gráfico</a></li>
-                    <li><a href="#uiux">UI/UX Design</a></li>
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="../../index.html#grafico">Design Gráfico</a></li>
+                    <li><a href="../../index.html#uiux">UI/UX Design</a></li>
                 </ul>
             </nav>
 
             <div class="btn-contato">
-                <a href="../../contact/index.html">
+                <a href="#">
                     <button>Contato</button>
                 </a>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="title">
-            <h1>Olá!</h1>
+    <main class="pagina-contato">
+        <div class="container">
+            <div class="titulo-contato">
+                <h1>Vamos conversar!</h1>
+            </div>
             
-            <div class="container-social">
-                <a href="https://www.linkedin.com/in/henriquesantosdev/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/HenriqueSantosDev" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="mailto:henriquesantosdev@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+            <div class="conteudo-contato">
+                <div class="formulario-container">
+                    <h2 class="form-titulo">Envie uma mensagem</h2>
+                    <form class="form-contato">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Seu email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Conte-me sobre sua ideia ou projeto..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-enviar">
+                            <i class='bx bx-paper-plane'></i> Enviar mensagem
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lado-direito">
+                    <div class="imagem-contato">
+                        <img src="../images/design.png" alt="">
+                        <div class="overlay-imagem"></div>
+                    </div>
+                    
+                    <div class="redes-sociais">
+                        <h3>Ou conecte-se por:</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/henrique-santtos/" class="social-link linkedin" target="_blank">
+                                <i class='bx bxl-linkedin'></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            
+                            <a href="https://github.com/Henrsilva12" class="social-link github" target="_blank">
+                                <i class='bx bxl-github'></i>
+                                <span>GitHub</span>
+                            </a>
+                            
+                            <a href="mailto:henrsilvasantos@gmail.com" class="social-link email" target="_blank">
+                                <i class='bx bxl-gmail'></i>
+                                <span>Email</span>
+                            </a>
+                            
+                            <a href="https://wa.me/5577998986939" class="social-link whatsapp" target="_blank">
+                                <i class='bx bxl-whatsapp'></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-
-        <section class="container-inputs">
-            <div class="inputs">
-                <form>
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Seu melhor email" required>
-
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" placeholder="Escreva sua mensagem aqui..." required></textarea>
-
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="container-footer">
-            <p>Criado por Henrique Santos</p>
+            <p>Criado por Henrique Santos • 2024</p>
         </div>
     </footer>
+
+    <script>
+        function showNotification(message, type = 'success') {
+            const oldNotifications = document.querySelectorAll('.notification');
+            oldNotifications.forEach(notification => notification.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 5000);
+        }
+
+        let ticking = false;
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const header = document.querySelector('header');
+                    const scrollPosition = window.scrollY;
+                    
+                    if (scrollPosition > 20) {
+                        header.classList.add('scrolled');
+                        
+                        const opacity = Math.min(0.98, 0.8 + (scrollPosition * 0.001));
+                        header.style.background = `linear-gradient(to bottom, 
+                            rgba(3, 9, 128, ${opacity}) 0%,
+                            rgba(0, 2, 33, ${opacity}) 0%)`;
+                    } else {
+                        header.classList.remove('scrolled');
+                        header.style.background = '';
+                    }
+                    
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            }
+            
+            header.style.backfaceVisibility = 'hidden';
+            header.style.transform = 'translateZ(0)';
+            
+            const elements = document.querySelectorAll('.formulario-container, .lado-direito');
+            
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 300 + (index * 200));
+            });
+        });
+
+        document.querySelector('.form-contato').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = form.querySelector('.btn-enviar');
+            const originalText = submitBtn.innerHTML;
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: 'Contato do Portfólio',
+                message: document.getElementById('message').value
+            };
+            
+            console.log('Enviando dados:', formData);
+            
+            submitBtn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbz5gxMC_Mb5oTMXPXog_9HThkQdWOHskp9zyEj1BaZCBAuEnYn1yj99qE0Ns-qsdTl3/exec';
+            
+            const formDataObj = new FormData();
+            formDataObj.append('name', formData.name);
+            formDataObj.append('email', formData.email);
+            formDataObj.append('subject', formData.subject);
+            formDataObj.append('message', formData.message);
+            
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formDataObj
+            })
+            .then(() => {
+                submitBtn.innerHTML = '<i class="bx bx-check-circle"></i> Enviado!';
+                submitBtn.style.background = '#12d426';
+                
+                showNotification('Mensagem enviada com sucesso!', 'success');
+                
+                setTimeout(() => {
+                    form.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                }, 2000);
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                submitBtn.innerHTML = '<i class="bx bx-error"></i> Erro';
+                submitBtn.style.background = '#ff4444';
+                
+                showNotification('Erro ao enviar mensagem. Tente novamente.', 'error');
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                }, 3000);
+            });
+        });
+    </script>
 </body>
 </html>
