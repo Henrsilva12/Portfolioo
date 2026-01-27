@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to bottom, 
+                rgba(1, 3, 58, 0.98) 0%,
+                rgba(0, 2, 33, 0.98) 50%,
+                rgba(0, 2, 33, 0.95) 100%);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.01);
+}
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+header.scrolled {
+    padding: 12px 0;
+    background: linear-gradient(to bottom, 
+                rgba(3, 9, 128, 0.98) 0%,
+                rgba(0, 2, 33, 0.98) 100%);
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-desktop {
+    margin-left: auto;
+}
+
+.menu-desktop ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu-desktop ul li {
+    display: inline-block;
+    padding: 0;
+}
+
+.menu-desktop a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: .2s;
+    position: relative;
+    padding: 8px 0;
+}
+
+.menu-desktop a:hover {
+    color: rgb(255, 87, 255);
+    transform: scale(1.05);
+}
+
+.btn-contato {
+    margin-left: 40px;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: violet;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transform: .2s;
+}
+
+.btn-contato button:hover {
+    box-shadow: 0 0 8px #ac02ac;
+    transform: scale(1.05);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+    .menu-desktop ul {
+        gap: 30px;
+    }
+
+    .btn-contato {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    header > .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-desktop {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .menu-desktop ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .menu-desktop a {
+        font-size: 15px;
+    }
+
+    .btn-contato {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .btn-contato button {
+        padding: 8px 25px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-desktop ul {
+        gap: 15px
+    }
+
+    .menu-desktop ul li {
+        padding: 0 8px;
+    }
+
+    .menu-desktop a {
+        font-size: 14px;
+    }
+
+    .btn-contato button {
+        padding: 7px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu-desktop ul {
+        gap: 30px;
+    }
+
+    .btn-contato {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+
+    header > .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-desktop {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .menu-desktop ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+
+    .menu-desktop a {
+        font-size: 15px;
+    }
+
+    .btn-contato {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .btn-contato button {
+        padding: 8px 25px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-desktop ul {
+        gap: 15px
+    }
+
+    .menu-desktop ul li {
+        padding: 0 8px;
+    }
+
+    .menu-desktop a {
+        font-size: 14px;
+    }
+
+    .btn-contato button {
+        padding: 7px 20px;
+        font-size: 14px;
+    }
+}
+
