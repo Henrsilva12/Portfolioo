@@ -273,7 +273,7 @@ header.scrolled {
 
 @media (max-width: 576px) {
      .menu-desktop ul {
-        gap: 15px;
+        gap: 12px;
         justify-content: flex-end;
     }
     
@@ -363,7 +363,7 @@ header.scrolled {
 
 @media (max-width: 400px) {
     .menu-desktop ul {
-        gap: 12px;
+        gap: 7px;
         justify-content: flex-end;
     }
     
