@@ -82,6 +82,10 @@ section.topo .flex {
     gap: 90px;
 }
 
+section.topo .flex .btn-contato {
+    margin-left: 0;
+}
+
 .topo h1 {
     color: white;
     font-size: 80px;
@@ -258,6 +262,8 @@ section.design-grafico .swiper-container {
         height: 400px;
     }
 }
+
+
 
 section.ui-ux {
     padding: 60px 4%;
@@ -438,6 +444,10 @@ section.ui-ux {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+    
     .linha-superior {
         grid-template-columns: 1fr;
     }
@@ -456,6 +466,10 @@ section.ui-ux {
 }
 
 @media (max-width: 576px) {
+    body {
+        padding-top: 65px;
+    }
+    
     .card-pequeno, .card-grande {
         height: 350px;
     }

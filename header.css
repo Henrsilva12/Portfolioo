@@ -102,34 +102,24 @@ header.scrolled {
     padding: 0 20px;
 }
 
-@media (max-width: 1024px) {
-    .menu-desktop ul {
-        gap: 30px;
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+        padding: 0 30px;
     }
 
-    .btn-contato {
-        margin-left: 30px;
+    .topo h1 {
+        font-size: 65px;
+    }
+
+    .topo .img-topo-site img {
+        width: 400px;
+        height: 400px;
     }
 }
 
-@media (max-width: 768px) {
-    header {
-        padding: 15px 0;
-    }
-
-    header > .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .menu-desktop {
-        margin-left: 0;
-        width: 100%;
-    }
-
+@media (max-width: 992px) {
     .menu-desktop ul {
-        justify-content: center;
-        flex-wrap: wrap;
         gap: 25px;
     }
 
@@ -138,101 +128,330 @@ header.scrolled {
     }
 
     .btn-contato {
-        margin-left: 0;
-        margin-top: 10px;
+        margin-left: 25px;
     }
 
+    .btn-contato button {
+        padding: 9px 35px;
+        font-size: 15px;
+    }
+    .container {
+        max-width: 800px;
+        padding: 0 25px;
+    }
+
+    section.topo .flex {
+        gap: 50px;
+    }
+
+    .topo h1 {
+        font-size: 55px;
+    }
+
+    .topo .txt-topo-site p {
+        font-size: 22px;
+    }
+
+    .topo .img-topo-site img {
+        width: 350px;
+        height: 350px;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+    }
+    
+    .carrossel-itens .item {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 0;
+    }
+    
+    header > .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .menu-desktop {
+        margin-left: auto;
+        width: auto;
+    }
+
+    .menu-desktop ul {
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .menu-desktop a {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+    .btn-contato {
+        margin-left: 15px;
+        margin-top: 0;
+    }
+    
     .btn-contato button {
         padding: 8px 25px;
-        font-size: 15px;
+        font-size: 14px;
+    }
+    
+    body {
+        padding-top: 65px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    section.topo .flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .topo h1 {
+        font-size: 48px;
+        padding-top: 10px;
+    }
+
+    .topo .txt-topo-site p {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .topo .img-topo-site img {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .carrossel-itens .item {
+        width: 300px;
+        height: 300px;
+    }
+
+    .linha-superior {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .card-pequeno, .card-grande {
+        height: 450px;
+    }
+
+    .contato h2 {
+        font-size: 32px;
+        text-align: left;
+    }
+
+    .contato .btn-contato {
+        margin: 0;
+    }
+
+    .swiper-button-prev {
+        left: 5px;
+    }
+
+    .swiper-button-next {
+        right: 5px;
+    }
+
+    .swiper-button-prev i,
+    .swiper-button-next i {
+        font-size: 20px;
     }
 }
 
-@media (max-width: 480px) {
-    .menu-desktop ul {
-        gap: 15px
+@media (max-width: 576px) {
+     .menu-desktop ul {
+        gap: 15px;
+        justify-content: flex-end;
     }
-
-    .menu-desktop ul li {
-        padding: 0 8px;
-    }
-
+    
     .menu-desktop a {
-        font-size: 14px;
+        font-size: 13px;
     }
-
+    
+    .btn-contato {
+        margin-left: 10px;
+    }
+    
     .btn-contato button {
         padding: 7px 20px;
-        font-size: 14px;
+        font-size: 13px;
     }
-}
-
-@media (max-width: 1024px) {
-    .menu-desktop ul {
-        gap: 30px;
-    }
-
-    .btn-contato {
-        margin-left: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 15px 0;
-    }
-
-    header > .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .menu-desktop {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .menu-desktop ul {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 25px;
-    }
-
+    
     body {
         padding-top: 70px;
     }
 
-    .menu-desktop a {
+    .container {
+        padding: 0 15px;
+    }
+
+    .topo h1 {
+        font-size: 38px;
+    }
+
+    .topo .txt-topo-site p {
+        font-size: 18px;
+    }
+
+    .topo .img-topo-site img {
+        width: 250px;
+        height: 250px;
+    }
+
+    h2.titulo {
+        font-size: 28px;
+    }
+
+    section.topo,
+    section.carrossel,
+    section.design-grafico,
+    section.ui-ux,
+    section.contato {
+        padding: 30px 4%;
+    }
+
+    .design-grafico p,
+    .ui-ux p {
+        font-size: 18px;
+    }
+
+    .carrossel-itens .item {
+        width: 250px;
+        height: 250px;
+    }
+
+    .swiper-slide {
+        width: 280px;
+        height: 400px;
+    }
+
+    .card-pequeno, .card-grande {
+        height: 350px;
+    }
+
+    .titulo-projeto {
+        font-size: 22px;
+    }
+
+    .contato h2 {
+        font-size: 26px;
+        line-height: 1.4;
+    }
+
+    .btn-contato button {
+        padding: 10px 30px;
         font-size: 15px;
+    }
+
+    .overlay {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu-desktop ul {
+        gap: 12px;
+        justify-content: flex-end;
+    }
+    
+    .menu-desktop a {
+        font-size: 12px;
     }
 
     .btn-contato {
-        margin-left: 0;
-        margin-top: 10px;
+        margin-left: 10px;
     }
-
+    
     .btn-contato button {
-        padding: 8px 25px;
-        font-size: 15px;
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+    
+    .topo h1 {
+        font-size: 32px;
+    }
+    
+    .topo .img-topo-site img {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .carrossel-itens .item {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .swiper-slide {
+        width: 250px;
+        height: 350px;
+    }
+    
+    .card-pequeno, .card-grande {
+        height: 300px;
+    }
+    
+    .titulo-projeto {
+        font-size: 18px;
+    }
+    
+    .contato h2 {
+        font-size: 22px;
     }
 }
 
-@media (max-width: 480px) {
-    .menu-desktop ul {
-        gap: 15px
-    }
-
-    .menu-desktop ul li {
-        padding: 0 8px;
-    }
-
-    .menu-desktop a {
-        font-size: 14px;
-    }
-
-    .btn-contato button {
-        padding: 7px 20px;
-        font-size: 14px;
+@media (max-height: 500px) and (orientation: landscape) {
+    header {
+        padding: 8px 0;
     }
 }
+
+@media (max-height: 600px) and (orientation: landscape) {
+    section.topo .flex {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    .topo h1 {
+        font-size: 32px;
+    }
+    
+    .topo .img-topo-site img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.carrossel-wrapper {
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .btn-contato button:hover,
+    .menu-desktop a:hover {
+        transform: none;
+    }
+    
+    .card-projeto:hover .imagem-projeto {
+        transform: none;
+    }
+    
+    .card-projeto:hover::before,
+    .card-projeto:hover .overlay {
+        opacity: 1;
+    }
+}
+
 
