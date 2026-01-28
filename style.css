@@ -388,10 +388,11 @@ section.ui-ux {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    transition: all 0.4s cubic-bezier(0.4, 0.2, 1);
+    transition: all 0.3s ease;
     background: rgba(251, 0, 0, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
     height: 500px;
+    box-shadow: none;
 }
 
 .card-pequeno {
@@ -402,7 +403,6 @@ section.ui-ux {
     height: 810px;
     width: 100%;
 }
-
 
 .imagem-container {
     position: relative;
@@ -417,9 +417,10 @@ section.ui-ux {
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    transition: all 0.6s cubic-bezier(0.4, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 1.275);
     filter: brightness(0.95);
     transform-origin: center center;
+    will-change: transform;
 }
 
 .card-grande .imagem-projeto {
@@ -433,23 +434,25 @@ section.ui-ux {
     width: 100%;
     height: 100%;
     background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.1) 30%,
-        rgba(0, 0, 0, 0.5) 70%,
-        rgba(0, 0, 0, 0.7) 100%,
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.5) 30%,
+        rgba(0, 0, 0, 0.2) 60%,
+        rgba(0, 0, 0, 0) 100%,
     );
-    opacity: 0;
+    opacity: 0.7;
     transition: all 0.5s cubic-bezier(0.4, 0.2, 1);
     display: flex;
     align-items: flex-end;
     padding: 40px;
     border-radius: 10px;
+    pointer-events: none;
 }
 
 .conteudo-overlay {
     transition: all 0.5s cubic-bezier(0.4, 0.2, 1) 0.1s;
     opacity: 0;
+    transform: translateY(20px);
     width: 100%;
 }
 
@@ -462,13 +465,14 @@ section.ui-ux {
 }
 
 .card-projeto:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border-color: rgba(235, 234, 235, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(235, 234, 235, 0.2);
 }
 
 .card-projeto:hover .imagem-projeto {
-    transform: scale(1.02);
-    filter: brightness(1.05);
+    transform: scale(1.05);
+    filter: brightness(1);
 }
 
 .card-projeto::before {
@@ -479,8 +483,8 @@ section.ui-ux {
     width: 100%;
     height: 100%;
     background: linear-gradient(to top,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0.5) 30%,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 30%,
         rgba(0, 0, 0, 0) 100%
     );
     border-radius: 0 0 10px 10px;
@@ -530,11 +534,19 @@ section.ui-ux {
     }
 
     .card-pequeno, .card-grande {
-        height: 500px;
+        height: 400px;
     }
 
     .grid-projetos {
         gap: 30px;
+    }
+
+    .overlay {
+        padding: 30px;
+    }
+
+    .titulo-projeto {
+        font-size: 24px;
     }
 }
 

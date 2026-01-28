@@ -221,58 +221,6 @@
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const swiper = new Swiper('.mySwiper', {
-                effect: "coverflow",
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: "auto",
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 200,
-                    modifier: 2.5,
-                    slideShadows: true,
-                },
-                loop: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                keyboard: {
-                    enabled: true,
-                },
-                breakpoints: {
-                    320: {
-                        coverflowEffect: {
-                            depth: 100,
-                            modifier: 1.5,
-                        },
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                    768: {
-                        coverflowEffect: {
-                            depth: 150,
-                            modifier: 2,
-                        },
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        coverflowEffect: {
-                            depth: 150,
-                            modifier: 2.5,
-                        },
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                },
-            });
-        });
-    </script>
-
-    <script>
         let ticking = false;
         
         window.addEventListener('scroll', function() {
@@ -307,45 +255,6 @@
             
             header.style.backfaceVisibility = 'hidden';
             header.style.transform = 'translateZ(0)';
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.card-projeto');
-            
-            cards.forEach(card => {
-                const img = card.querySelector('.imagem-projeto');
-                
-                card.addEventListener('mousemove', function(e) {
-                    const x = e.clientX - card.getBoundingClientRect().left;
-                    const y = e.clientY - card.getBoundingClientRect().top;
-                    
-                    const centerX = card.offsetWidth / 2;
-                    const centerY = card.offsetHeight / 2;
-                    
-                    const moveX = (x - centerX) * 0.01;
-                    const moveY = (y - centerY) * 0.01;
-                    
-                    img.style.transform = `scale(1.05) translate(${moveX}px, ${moveY}px)`;
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    img.style.transform = 'scale(1)';
-                });
-            });
-            
-            const images = document.querySelectorAll('.imagem-projeto');
-            images.forEach(img => {
-                if (img.complete) {
-                    img.style.opacity = '1';
-                } else {
-                    img.style.opacity = '0';
-                    img.addEventListener('load', function() {
-                        this.style.opacity = '1';
-                    });
-                }
-            });
         });
     </script>
 </body>
