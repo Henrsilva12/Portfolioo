@@ -99,7 +99,6 @@ h2 {
     object-fit: contain;
 }
 
-
 .about h2,
 .about-text,
 .about-text p {
@@ -512,7 +511,7 @@ img {
     display: flex;
     align-items: center;
     gap: 10px;
-    font: 24px;
+    font-size: 24px;
 }
 
 .coluna p {
