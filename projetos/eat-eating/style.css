@@ -123,6 +123,28 @@ h2 {
         padding: 0 15px;
     }
 
+    .about {
+        padding: 40px 0;
+        margin: 40px 0;
+    }
+    
+    .about h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        padding-left: 0;
+        margin-left: 15px;
+    }
+    
+    .about-text {
+        min-height: 100%;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        text-align: justify;
+        margin-left: 35px;
+    }
+
     .about-content {
         gap: 40px;
     }
@@ -146,10 +168,6 @@ h2 {
 }
 
 @media (max-width: 768px) {
-    .hero-projeto {
-        padding-top: 100px;
-    }
-
     .hero-projeto h1 {
         font-size: 36px;
     }
@@ -167,7 +185,7 @@ h2 {
         font-size: 28px;
         margin-bottom: 20px;
         padding-left: 0;
-        margin-left: 35px;
+        margin-left: 15px;
     }
 
     .about-content {
@@ -288,6 +306,11 @@ h2 {
 }
 
 @media (max-width: 600px) {
+    .hero-projeto {
+        margin-bottom: 40px;
+        padding-top: 100px;
+    }
+    
     .hero-projeto h1 {
         font-size: 32px;
     }
@@ -359,10 +382,6 @@ h2 {
 @media (max-width: 480px) {
     .container {
         padding: 0 10px;
-    }
-    
-    .hero-projeto {
-        padding-top: 120px;
     }
     
     .hero-projeto h1 {
@@ -476,6 +495,261 @@ h2 {
         padding: 10px 25px;
         font-size: 14px;
     }
+}
+
+@media (max-width: 593px) {
+    .hero-projeto {
+        margin-bottom: 40px;
+        padding-top: 100px;
+    }
+    
+    .hero-projeto h1 {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+    
+    .subtitulo {
+        font-size: 15px;
+        line-height: 1.4;
+        margin: 0 auto 20px;
+        padding: 0 10px;
+    }
+    
+    .hero-image {
+        margin-top: 20px;
+        max-width: 95%;
+    }
+    
+    .about {
+        padding: 30px 0;
+        margin: 30px 0;
+    }
+    
+    .about h2 {
+        font-size: 26px;
+        margin-left: 0;
+        padding-left: 18px;
+        text-align: left;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 10px;
+    }
+    
+    .about-text {
+        margin-left: 0;
+        padding-left: 0;
+        width: 100%;
+    }
+    
+    .about-text p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-left: 0;
+        padding: 0 10px;
+        text-align: justify;
+    }
+    
+    .about-image {
+        margin-top: 0;
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    .grid-detalhes {
+        margin: 30px 0;
+        gap: 20px;
+    }
+    
+    .coluna {
+        padding: 20px 15px;
+    }
+    
+    .coluna h2 {
+        font-size: 20px;
+    }
+    
+    .coluna p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .coluna li {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+    
+    .coluna li.li-desafio {
+        font-size: 15px;
+    }
+    
+    .processo-projeto {
+        margin: 40px 0;
+    }
+    
+    .etapas {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .etapa {
+        padding: 20px;
+    }
+    
+    .etapa h3 {
+        font-size: 16px;
+    }
+    
+    .etapa p {
+        font-size: 14px;
+    }
+    
+    .image-processos {
+        padding: 0 10px 30px;
+    }
+    
+    .image-processos h4 {
+        font-size: 22px;
+        padding-top: 30px;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .image-processos h5 {
+        font-size: 18px;
+        padding-top: 25px;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .galeria-grid-alta {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .galeria-grid-dashboard {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .explore-more {
+        padding: 30px 0 40px;
+        margin: 30px 0;
+    }
+    
+    .explore-title {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .explore-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .explore-card {
+        margin: 0 10px;
+    }
+    
+    .explore-card-image {
+        height: 170px;
+    }
+    
+    .explore-card-content {
+        padding: 15px;
+    }
+    
+    .explore-card-content h3 {
+        font-size: 18px;
+    }
+    
+    .explore-card-content p {
+        font-size: 13px;
+    }
+    
+    .cta-projeto {
+        padding: 25px 15px;
+        margin: 25px 10px 0;
+        border-radius: 15px;
+    }
+    
+    .cta-projeto h2 {
+        font-size: 22px;
+    }
+    
+    .cta-projeto p {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+    
+    .cta-projeto .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+    
+    footer {
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+    
+    .container-footer p {
+        font-size: 14px;
+    }
+    
+    .container {
+        overflow-x: hidden;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    .about-text {
+        margin-left: 0 !important;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 593px) {
+    .hero-projeto h1 {
+        font-size: 32px;
+        margin-top: -90px;
+    }
+    
+    .subtitulo {
+        font-size: 16px;
+    }
+    
+    .about-text p {
+        font-size: 15px;
+    }
+    
+    .coluna h2 {
+        font-size: 22px;
+    }
+    
+    .explore-card-image {
+        height: 190px;
+    }
+
 }
 
 
