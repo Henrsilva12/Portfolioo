@@ -7,7 +7,7 @@ body {
 }
 
 span {
-    color: #0464f5;
+    color: #006eff;
     font-weight: 600;
 }
 
@@ -24,7 +24,7 @@ span {
     font-size: 48px;
     margin: 20px 0;
     line-height: 1.2;
-    color: white;
+    color: #006eff;
 }
 
 .subtitulo {
@@ -805,7 +805,7 @@ h2 {
 }
 
 .coluna h2 {
-    color: #0464f5;
+    color: #006eff;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -836,7 +836,7 @@ h2 {
 
 .coluna li:before {
     content: "✓";
-    color: #0464f5;
+    color: #006eff;
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -918,11 +918,11 @@ h2 {
     padding: 25px;
     border-radius: 15px;
     text-align: center;
-    border-top: 4px solid #0464f5;
+    border-top: 4px solid #006eff;
 }
 
 .etapa h3 {
-    color: #0464f5;
+    color: #006eff;
     margin-bottom: 10px;
     font-size: 18px;
 }

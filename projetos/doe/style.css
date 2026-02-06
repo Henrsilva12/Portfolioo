@@ -24,7 +24,7 @@ span {
     font-size: 48px;
     margin: 20px 0;
     line-height: 1.2;
-    color: white;
+    color: #b462fc;
 }
 
 .subtitulo {
@@ -80,12 +80,12 @@ h2 {
 }
 
 .about-image {
-    flex: 0 0 300px;
+    flex: 0 0 250px;
     align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -70px;
+    
 }
 
 .about-image img {
