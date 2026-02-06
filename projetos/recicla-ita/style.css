@@ -7,7 +7,7 @@ body {
 }
 
 span {
-    color: #0464f5;
+    color: rgb(60, 245, 60);
     font-weight: 600;
 }
 
@@ -24,7 +24,7 @@ span {
     font-size: 48px;
     margin: 20px 0;
     line-height: 1.2;
-    color: white;
+    color: rgb(60, 245, 60);
 }
 
 .subtitulo {
@@ -54,7 +54,7 @@ span {
 h2 {
     font-size: 32px;
     margin-bottom: 30px;
-    color: #0464f5;
+    color: rgb(60, 245, 60);
     text-align: left;
     position: relative;
     padding-left: 0;
@@ -805,7 +805,7 @@ h2 {
 }
 
 .coluna h2 {
-    color: #0464f5;
+    color: rgb(60, 245, 60);
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -836,7 +836,7 @@ h2 {
 
 .coluna li:before {
     content: "✓";
-    color: #0464f5;
+    color: rgb(60, 245, 60);
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -918,11 +918,11 @@ h2 {
     padding: 25px;
     border-radius: 15px;
     text-align: center;
-    border-top: 4px solid #0464f5;
+    border-top: 4px solid rgb(60, 245, 60);
 }
 
 .etapa h3 {
-    color: #0464f5;
+    color: rgb(60, 245, 60);
     margin-bottom: 10px;
     font-size: 18px;
 }
@@ -939,7 +939,7 @@ h2 {
 
 .image-processos h4 {
     margin-bottom: 15px;
-    color: #0464f5;
+    color: rgb(60, 245, 60);
     font-size: 25px;
     padding-top: 40px;
     text-align: center;
