@@ -142,6 +142,15 @@ section.topo .flex .btn-contato {
         width: 350px;
         height: 350px;
     }
+
+    .topo .img-topo-site {
+        justify-content: center;
+        order: -1;
+    }
+
+    .topo .txt-topo-site {
+        order: 2;
+    }
     
     section.topo .flex {
         gap: 30px;
