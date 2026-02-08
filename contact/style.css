@@ -152,7 +152,7 @@ body::before {
     margin-top: 10px;
     font-size: clamp(14px, 1.8vw, 16px);
     font-weight: 600;
-    background: linear-gradient(45deg, violet, #ac02ac);
+    background-color: violet;
     border: none;
     color: black;
     cursor: pointer;

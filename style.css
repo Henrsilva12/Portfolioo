@@ -135,12 +135,17 @@ section.topo .flex .btn-contato {
 
 @media (max-width: 992px) {
     .topo h1 {
-        max-width: 400px;
+        text-align: center;
+        max-width: 100%;
     }
     
+    .topo .txt-topo-site p {
+        text-align: center;
+        max-width: 100%;
+    }
+
     .topo .img-topo-site img {
-        width: 350px;
-        height: 350px;
+        margin: 0;
     }
 
     .topo .img-topo-site {
@@ -154,6 +159,8 @@ section.topo .flex .btn-contato {
     
     section.topo .flex {
         gap: 30px;
+        flex-direction: column;
+        text-align: center;
     }
 
     section.topo .flex h1 {
@@ -637,7 +644,6 @@ section.contato {
 .contato .btn-contato {
     margin-left: 0;
 }
-
 
 footer {
     background: linear-gradient(to bottom, 
