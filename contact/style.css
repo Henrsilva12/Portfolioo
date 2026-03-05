@@ -204,7 +204,7 @@ body::before {
 }
 
 .redes-sociais {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.056);
     backdrop-filter: blur(10px);
     border-radius: clamp(15px, 3vw, 20px);
     padding: clamp(15px, 3vw, 20px);

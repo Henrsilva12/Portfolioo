@@ -263,7 +263,7 @@ h2 {
 }
 
 .etapa p {
-    color: #ccc;
+    color: #e7e6e6;
     line-height: 1.5;
     font-size: clamp(14px, 1.6vw, 16px);
 }

@@ -159,40 +159,12 @@ h2 {
     font-size: clamp(14px, 1.6vw, 16px);
 }
 
-.coluna ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.coluna li {
-    padding: clamp(8px, 1.5vw, 10px) 0;
-    position: relative;
-    padding-left: 25px;
-    color: #f2f0f0;
-    text-align: justify;
-    line-height: 1.5;
-    font-size: clamp(14px, 1.6vw, 16px);
-}
-
-.coluna li:before {
-    content: "✓";
-    color: rgb(60, 245, 60);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
-.coluna li.li-desafio {
-    font-size: clamp(16px, 2vw, 18px);
-}
-
 .galeria-projeto {
     margin: clamp(40px, 6vw, 60px) 0;
     width: 100%;
 }
 
 .galeria-grid,
-.galeria-grid-alta,
 .galeria-grid-dashboard {
     display: grid;
     gap: clamp(15px, 2vw, 30px);
@@ -204,16 +176,11 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
 }
 
-.galeria-grid-alta {
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-}
-
 .galeria-grid-dashboard {
     grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
 }
 
 .galeria-grid img,
-.galeria-grid-alta img,
 .galeria-grid-dashboard img {
     width: 100%;
     height: auto;
@@ -223,7 +190,6 @@ h2 {
 }
 
 .galeria-grid img:hover,
-.galeria-grid-alta img:hover,
 .galeria-grid-dashboard img:hover {
     transform: scale(1.02);
 }
@@ -258,7 +224,7 @@ h2 {
 }
 
 .etapa p {
-    color: #ccc;
+    color: #e7e6e6;
     line-height: 1.5;
     font-size: clamp(14px, 1.6vw, 16px);
 }
@@ -606,11 +572,6 @@ img {
         text-align: left;
     }
     
-    .coluna li {
-        font-size: 14px;
-        padding: 8px 0 8px 20px;
-    }
-    
     .explore-more {
         padding: 30px 0 40px;
     }
@@ -690,7 +651,6 @@ img {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .hero-image,
     .galeria-grid img,
-    .galeria-grid-alta img,
     .galeria-grid-dashboard img,
     .explore-card-image img {
         image-rendering: -webkit-optimize-contrast;
